@@ -29,6 +29,10 @@ function __chain_prompt_root
   end
 end
 
+function __chain_hostname
+    __chain_prompt_segment cyan (hostname)
+end
+
 function __chain_prompt_dir
   __chain_prompt_segment cyan (prompt_pwd)
 end
@@ -60,6 +64,7 @@ function fish_prompt
 
   __chain_prompt_root
   __chain_prompt_dir
+  __chain_hostname
   type -q git; and __chain_prompt_git
   __chain_prompt_arrow
 
