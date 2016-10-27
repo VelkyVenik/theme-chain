@@ -63,8 +63,8 @@ function fish_prompt
   set -g last_status $status
 
   __chain_prompt_root
-  __chain_prompt_dir
   __chain_hostname
+  __chain_prompt_dir
   type -q git; and __chain_prompt_git
   __chain_prompt_arrow
 
