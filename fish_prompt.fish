@@ -30,7 +30,7 @@ function __chain_prompt_root
 end
 
 function __chain_hostname
-    __chain_prompt_segment cyan (hostname)
+    __chain_prompt_segment cyan (hostname -s)
 end
 
 function __chain_prompt_dir
