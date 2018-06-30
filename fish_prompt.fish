@@ -59,10 +59,15 @@ function __chain_prompt_arrow
   echo -n "$chain_prompt_glyph "
 end
 
+function __chain_venv
+    __chain_prompt_segment green (basename $VIRTUAL_ENV)
+end
+
 function fish_prompt
   set -g last_status $status
 
   __chain_prompt_root
+  test -n "$VIRTUAL_ENV"; and __chain_venv
   __chain_hostname
   __chain_prompt_dir
   type -q git; and __chain_prompt_git
